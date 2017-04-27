@@ -1,4 +1,5 @@
-from Adafruit_PWM_Servo_Driver import PWM
+#from Adafruit_MotorHAT
+from Adafruit_MotorHAT import Adafruit_MotorHAT
  
 pwm = PWM(0x60)
 pwm.setPWMFreq(1000)
