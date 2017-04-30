@@ -32,8 +32,10 @@ for i in range (1,iter):
 time.sleep(10)
 
 def turnOffMotors():
-    pwm.setPWM(in1,0,0)
-    pwm.setPWM(in2,0,0)
+    pwm.setPWM(3,0,0)
+    pwm.setPWM(4,0,0)
+    pwm.setPWM(9,0,0)
+    pwm.setPWM(10,0,0)
     print ("kurwa koniec")
 
 atexit.register(turnOffMotors)
