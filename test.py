@@ -20,5 +20,6 @@ time.sleep(1)
 def turnOffMotors():
     pwm.setPWM(in1,0,0)
     pwm.setPWM(in2,0,0)
+    print ("kurwa koniec")
 
 atexit.register(turnOffMotors)
