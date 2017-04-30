@@ -15,7 +15,7 @@ pwm.setPWM(2, 0, 1000)
 pwm.setPWM(3, 4096, 0)
 pwm.setPWM(4, 0, 0)
 
-time.sleep(1)
+time.sleep(10)
 
 def turnOffMotors():
     pwm.setPWM(in1,0,0)
