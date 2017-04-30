@@ -1,0 +1,13 @@
+from Adafruit_MotorHAT.Adafruit_PWM_Servo_Driver import PWM
+
+pwm = PWM(0x60)
+pwm.setPWMFreq(1000)
+
+pwm.setPWM(3,0,0)
+pwm.setPWM(4,0,0)
+pwm.setPWM(9,0,0)
+pwm.setPWM(10,0,0)
+pwm.setPWM(12,0,0)
+pwm.setPWM(11,0,0)
+pwm.setPWM(6,0,0)
+pwm.setPWM(5,0,0)
