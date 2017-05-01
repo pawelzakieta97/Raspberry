@@ -70,8 +70,6 @@ def jakisStep():
     
 def test():
     for i in range (1,iter):
-        coil1(-pow)
-        time.sleep(dt)
         coil1(pow)
         time.sleep(dt)
 
@@ -82,5 +80,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("kurwa koniec")
     
-jakisStep()
+test()
 atexit.register(turnOffMotors)
