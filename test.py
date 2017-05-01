@@ -82,5 +82,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("kurwa koniec")
     
-test()
+jakisStep()
 atexit.register(turnOffMotors)
