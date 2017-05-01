@@ -4,7 +4,7 @@ from Adafruit_MotorHAT.Adafruit_PWM_Servo_Driver import PWM
 import atexit
 import time
 
-pow = 1000
+pow = 4000
 iter = 20
 dt=0.1
 
@@ -80,5 +80,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("kurwa koniec")
     
-test()
+jakisStep()
 atexit.register(turnOffMotors)
