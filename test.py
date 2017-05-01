@@ -4,7 +4,7 @@ from Adafruit_MotorHAT.Adafruit_PWM_Servo_Driver import PWM
 import atexit
 import time
 
-pow = 4000
+pow = 1000
 iter = 20
 dt=0.1
 
@@ -27,6 +27,7 @@ def coil1(pow):
         print ("cewka 1 null")
     
 def coil2(pow): 
+    pow=-pow
     pwm.setPWM(8, 0, pow)
     if (pow<0):
         pwm.setPWM(9,0,0)
