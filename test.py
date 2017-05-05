@@ -6,7 +6,7 @@ import time
 
 pow = 1000
 iter = 20
-dt=0.1
+dt=0.0001
 
 pwm = PWM(0x60)
 pwm.setPWMFreq(1000)
@@ -111,5 +111,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("koniec")
     
-halfStep()
+fullStep()
 atexit.register(turnOffMotors)
