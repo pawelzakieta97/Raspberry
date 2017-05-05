@@ -94,7 +94,7 @@ def turnOffMotors():
     pwm.setPWM(4,0,0)
     pwm.setPWM(9,0,0)
     pwm.setPWM(10,0,0)
-    print ("kurwa koniec")
+    print ("koniec")
     
 test()
 atexit.register(turnOffMotors)
