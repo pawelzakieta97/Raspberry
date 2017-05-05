@@ -42,7 +42,7 @@ def coil2(pow):
         pwm.setPWM(4, 0, 0)
         print ("cewka 2 null")
 
-def jakisStep():
+def halfStep():
     for i in range (1,iter):
         coil2(0)
         coil1(pow)
@@ -81,5 +81,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("kurwa koniec")
     
-jakisStep()
+halfStep()
 atexit.register(turnOffMotors)
