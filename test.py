@@ -106,6 +106,5 @@ def turnOffMotors():
     print ("koniec")
     
 #test()
-coil1(-pow)
-time.sleep(20)
+halfStep()
 atexit.register(turnOffMotors)
