@@ -5,8 +5,8 @@ import atexit
 import time
 
 pow = 1000
-iter = 2
-dt=0.5
+iter = 20
+dt=0.1
 
 pwm = PWM(0x60)
 pwm.setPWMFreq(1000)
