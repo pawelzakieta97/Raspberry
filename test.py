@@ -68,7 +68,9 @@ def halfStep():
         coil2(-pow)
         coil1(pow)
         time.sleep(dt)
-    
+def fullStep():
+    for i in range (1,iter):
+        
 def test():
     for i in range (1,iter):
         coil1(pow)
@@ -81,5 +83,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("kurwa koniec")
     
-halfStep()
+test()
 atexit.register(turnOffMotors)
