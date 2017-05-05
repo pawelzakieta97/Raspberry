@@ -71,6 +71,19 @@ def halfStep():
 def fullStep():
     for i in range (1,iter):
         
+        coil2(pow)
+        coil1(0)
+        time.sleep(dt)
+        coil2(0)
+        coil1(pow)
+        time.sleep(dt)
+        coil2(-pow)
+        coil1(0)
+        time.sleep(dt)
+        coil2(0)
+        coil1(-pow)
+        time.sleep(dt)
+        
 def test():
     for i in range (1,iter):
         coil1(pow)
