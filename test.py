@@ -105,6 +105,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("koniec")
     
-#test()
-halfStep()
+test()
 atexit.register(turnOffMotors)
