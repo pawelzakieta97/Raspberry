@@ -17,7 +17,7 @@ def coil1(pow):
         pwm.setPWM(3,0,0)
         pwm.setPWM(4,4096,0)
         print ("cewka 1 -")
-    else:
+    if (pow>0):
         pwm.setPWM(3, 4096, 0)
         pwm.setPWM(4, 0, 0)
         print ("cewka 1 +")
@@ -27,13 +27,12 @@ def coil1(pow):
         print ("cewka 1 null")
     
 def coil2(pow): 
-    pow=-pow
     pwm.setPWM(8, 0, pow)
     if (pow<0):
         pwm.setPWM(9,0,0)
         pwm.setPWM(10,4096,0)
         print ("cewka 2 -")
-    else:
+    if (pow>0):
         pwm.setPWM(9, 4096, 0)
         pwm.setPWM(10, 0, 0)
         print ("cewka 2 +")
@@ -70,7 +69,6 @@ def halfStep():
         time.sleep(dt)
 def fullStep():
     for i in range (1,iter):
-        
         coil2(pow)
         coil1(0)
         time.sleep(dt)
