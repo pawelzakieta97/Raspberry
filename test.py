@@ -6,7 +6,7 @@ import time
 
 pow = 1000
 iter = 20
-dt=0.1
+dt=0.5
 
 pwm = PWM(0x60)
 pwm.setPWMFreq(1000)
