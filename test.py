@@ -5,7 +5,7 @@ import atexit
 import time
 
 pow = 1000
-iter = 1
+iter = 2
 dt=0.5
 
 pwm = PWM(0x60)
