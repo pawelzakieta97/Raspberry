@@ -98,5 +98,7 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("koniec")
     
-test()
+#test()
+coil1(-pow)
+time.sleep(20)
 atexit.register(turnOffMotors)
