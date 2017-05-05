@@ -12,18 +12,21 @@ pwm = PWM(0x60)
 pwm.setPWMFreq(1000)
 
 def coil1(pow):
-    pwm.setPWM(2, 0, pow)
+    
     if (pow<0):
         pwm.setPWM(3,0,4096)
         pwm.setPWM(4,4096,0)
+        pwm.setPWM(2, 0, -pow)
         print ("cewka 1 -")
     if (pow>0):
         pwm.setPWM(3, 4096, 0)
         pwm.setPWM(4, 0, 4096)
+        pwm.setPWM(2, 0, pow)
         print ("cewka 1 +")
     if (pow==0):
         pwm.setPWM(3, 0, 0)
         pwm.setPWM(4, 0, 0)
+        pwm.setPWM(2, 0, pow)
         print ("cewka 1 null")
     
 def coil2(pow): 
@@ -31,14 +34,17 @@ def coil2(pow):
     if (pow<0):
         pwm.setPWM(9,0,4096)
         pwm.setPWM(10,4096,0)
+        pwm.setPWM(8, 0, -pow)
         print ("cewka 2 -")
     if (pow>0):
         pwm.setPWM(9, 4096, 0)
         pwm.setPWM(10, 0, 4096)
+        pwm.setPWM(8, 0, pow)
         print ("cewka 2 +")
     if (pow==0):
         pwm.setPWM(3, 0, 0)
         pwm.setPWM(4, 0, 0)
+        pwm.setPWM(8, 0, pow)
         print ("cewka 2 null")
 
 def halfStep():
@@ -90,6 +96,7 @@ def test():
         coil2(0)
         coil1(-pow)
         time.sleep(2)
+    
 
 def turnOffMotors():
     pwm.setPWM(3,0,0)
