@@ -84,8 +84,18 @@ def fullStep():
         
 def test():
     for i in range (1,iter):
+        coil2(pow)
+        coil1(0)
+        time.sleep(2)
+        coil2(0)
         coil1(pow)
-        time.sleep(dt)
+        time.sleep(2)
+        coil2(-pow)
+        coil1(0)
+        time.sleep(2)
+        coil2(0)
+        coil1(-pow)
+        time.sleep(2)
 
 def turnOffMotors():
     pwm.setPWM(3,0,0)
@@ -94,5 +104,5 @@ def turnOffMotors():
     pwm.setPWM(10,0,0)
     print ("koniec")
     
-fullStep()
+test()
 atexit.register(turnOffMotors)
