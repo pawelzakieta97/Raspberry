@@ -4,7 +4,7 @@ from Adafruit_MotorHAT.Adafruit_PWM_Servo_Driver import PWM
 import atexit
 import time
 
-pow = 1000
+pow = 4000
 iter = 20000
 dt=0.1
 
